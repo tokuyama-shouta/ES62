@@ -310,7 +310,7 @@ function validateShoppingList(...items) {
   return items; 
 }
 
-validateShoppingList('オレンジ','パンだよ'); 
+validateShoppingList('オレンジ','パンだよ!'); 
 
 const MathLibrary = {
   colculateProduct(...rest){
