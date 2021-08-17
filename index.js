@@ -323,4 +323,12 @@ const MathLibrary = {
 MathLibrary.colculateProduct(2,3);
 MathLibrary.multiply(2,3);
 
+let expense = {
+  type: '交際費',
+  amount: '4500 JPY'
+}
+
+const { type,amount } = expense;
+type;
+amount;
 
