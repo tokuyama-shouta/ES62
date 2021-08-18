@@ -345,3 +345,12 @@ function fileSummary({ name, extension, size },{ username }){
 
 fileSummary(saveFile,{username: 'ken'});
 
+const companies = [
+  'Google',
+  'Facebook',
+  'Uber'
+];
+
+const [ name, ...rest ] = companies;
+name;
+rest;
