@@ -354,3 +354,19 @@ const companies = [
 const [ name, ...rest ] = companies;
 name;
 rest;
+
+const companies = [
+  {name:'Google', location: 'マウンテンビュー'},
+  {name:'Facebook', location: 'メロンパーク'},
+  {name:'Uber', location: 'サンフランシスコ'},
+];
+
+const [ {location} ] = companies;
+location;
+
+const Google = {
+  locations: ['マウンテンビュー','ニューヨーク','ロンドン']
+}
+
+const { locations: [ first ] } = Google;
+first;
