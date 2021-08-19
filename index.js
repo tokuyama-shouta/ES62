@@ -370,3 +370,16 @@ const Google = {
 
 const { locations: [ first ] } = Google;
 first;
+
+function signup({username, password, email, birthday, city}) {
+
+}
+
+const user = {
+  username: 'myusername',
+  password: 'mypassword',
+  email: 'myemail@example.com',
+  birthday: '1990/1/1',
+  city: '東京'
+}
+signup(user);
