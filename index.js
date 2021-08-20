@@ -394,3 +394,15 @@ points.map(( [x, y] ) => {
   return { x, y}
 });
 
+function Car(option) {
+  this.title = options.title;
+}
+
+Car.prototype.drive = function() {
+  return 'ウィーン';
+}
+
+let car = new Car({title: 'プリウス'});
+car;
+car.drive();
+
