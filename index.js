@@ -402,7 +402,7 @@ Car.prototype.drive = function() {
   return 'ウィーン';
 }
 
-let car = new Car({title: 'プリウス'});
+let car = new Car({title: 'プリウスだよ'});
 car;
 car.drive();
 
