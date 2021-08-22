@@ -402,7 +402,23 @@ Car.prototype.drive = function() {
   return 'ウィーン';
 }
 
+function Toyota(options) {
+  Car.call(this.options);
+  this.color = options.color;
+}
+
+Toyota.prototype = object.create(Car.prototype);
+Toyota.prototype.constructor = Toyota;
+
+Toyota.prototype.honk = function() {
+  return 'ぶぶー！！';
+}
+
+const toyota = new Toyota({color: 'red', title: 'アクア'});
+
 let car = new Car({title: 'プリウスだよ'});
 car;
 car.drive();
+
+
 
