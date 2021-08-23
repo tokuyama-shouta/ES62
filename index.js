@@ -435,5 +435,22 @@ const car = new Car({ title: 'アクア'});
 car
 car.drive();
 
+class Toyota extends Car {
+
+  constructor(options){
+    super(options);
+    this.color = options.color;
+  }
+
+  honk(){
+    return 'ぶぶー';
+  }
+}
+
+const toyota = new Toyota({ color: 'red', title: 'アクア'});
+toyota.drive();
+toyota.honk();
+
+
 
 
