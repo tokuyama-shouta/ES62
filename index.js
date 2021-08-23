@@ -420,5 +420,20 @@ let car = new Car({title: 'プリウスだよ'});
 car;
 car.drive();
 
+class Car {
+  constructor({title}){
+    this.title = title;
+  }
+
+  drive(){
+    return 'ウイーン';
+  }
+
+}
+
+const car = new Car({ title: 'アクア'});
+car
+car.drive();
+
 
 
