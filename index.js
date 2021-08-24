@@ -465,6 +465,12 @@ for(let number of numbers){
   total += number;
 }
 
+function* numbers() {
+  yield;
+}
+const gen = numbers();
+gen.next();
+
 
 
 
