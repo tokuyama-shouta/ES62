@@ -492,5 +492,24 @@ gen.next(); //家から歩道に出る
 gen.next('日用品'); // お店で買い物をして日用品を持って歩道に出る。
 gen.next('綺麗な服')
 
+function* colors(){
+  yield 'red';
+  yield 'blue';
+  yield 'green';
+}
+
+const gen = colors();
+gen.next();
+gen.next();
+gen.next();
+gen.next();
+
+const myColors = [];
+
+for (let color of colors()) {
+  myColors.push(color);
+}
+myColors
+
 
 
