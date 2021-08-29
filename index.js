@@ -511,5 +511,22 @@ for (let color of colors()) {
 }
 myColors
 
+const engineeringTeam = {
+  size: 3,
+  department: '開発部',
+  lead: '太郎',
+  manager: '花子',
+  engineer: '次郎'
+};
 
+function* TeamIterator(team) {
+  yield team.lead;
+  yield team.manager;
+  yield team.engineer;
+}
+
+for(let name of TeamIterator(engineerTeam)){
+  names.push(name);
+}
+names
 
