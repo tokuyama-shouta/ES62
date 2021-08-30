@@ -511,7 +511,7 @@ for (let color of colors()) {
 }
 myColors
 
-const testtingTeam = {
+const testingTeam = {
   lead: '典子',
   tester: '隆'
 }
@@ -528,12 +528,14 @@ function* TeamIterator(team) {
   yield team.lead;
   yield team.manager;
   yield team.engineer;
+  const TestingTeamIterator = TestingTeamIterator(team.TestingTeamIterator)
+  yield* TestingTeamIterator
 
 }
 
 function* TestingTeamIterator(team){
   yield team.lead;
-  yield team.testor;
+  yield team.tester;
 }
 
 for(let name of TeamIterator(engineerTeam)){
