@@ -519,25 +519,22 @@ const testingTeam = {
     yield this.tester;
   }
 }
+
 const engineeringTeam = {
   size: 3,
   department: '開発部',
   lead: '太郎',
   manager: '花子',
   engineer: '次郎',
-  testtingTeam
+  [Symbol.iterator]: function* () {
+    yield this.lead;
+    yield this.manager;
+    yield this.engineer;
+    yield* this.testingTeam
+  }
 };
 
-function* TeamIterator(team) {
-  yield team.lead;
-  yield team.manager;
-  yield team.engineer;
-  const TestingTeamIterator = TestingTeamIterator(team.TestingTeamIterator)
-  yield* team.testingTeam
-
-}
-
-for(let name of TeamIterator(engineerTeam)){
+for(let name of engineerTeam){
   names.push(name);
 }
 names
