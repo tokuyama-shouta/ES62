@@ -513,7 +513,11 @@ myColors
 
 const testingTeam = {
   lead: '典子',
-  tester: '隆'
+  tester: '隆',
+  [Symbol.iterator]:function* () {
+    yield this.lead;
+    yield this.tester;
+  }
 }
 const engineeringTeam = {
   size: 3,
@@ -529,13 +533,8 @@ function* TeamIterator(team) {
   yield team.manager;
   yield team.engineer;
   const TestingTeamIterator = TestingTeamIterator(team.TestingTeamIterator)
-  yield* TestingTeamIterator
+  yield* team.testingTeam
 
-}
-
-function* TestingTeamIterator(team){
-  yield team.lead;
-  yield team.tester;
 }
 
 for(let name of TeamIterator(engineerTeam)){
