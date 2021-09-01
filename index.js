@@ -525,7 +525,7 @@ const engineeringTeam = {
   department: '開発部',
   lead: '太郎',
   manager: '花子',
-  engineer: '次郎',
+  engineer: 'ゆう次郎',
   [Symbol.iterator]: function* () {
     yield this.lead;
     yield this.manager;
