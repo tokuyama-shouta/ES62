@@ -539,3 +539,17 @@ for(let name of engineerTeam){
 }
 names
 
+class Comment {
+  constructor(content,children) {
+    this.content = content;
+    this.childlen = children;
+  }
+}
+
+const childlen = [
+  new Comment('賛成！！',[]),
+  new Comment('反対！！',[]),
+  new Comment('うーん・・・',[]),
+];
+const tree = new Comment('非常に良い記事です',children);
+tree
