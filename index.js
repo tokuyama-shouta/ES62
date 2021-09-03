@@ -544,6 +544,13 @@ class Comment {
     this.content = content;
     this.childlen = children;
   }
+
+  *[Symbol.iterator](){
+    yield this.content;
+    for (let child of this.childlen){
+      yield* child;
+    }
+  }
 }
 
 const childlen = [
@@ -552,4 +559,9 @@ const childlen = [
   new Comment('うーん・・・',[]),
 ];
 const tree = new Comment('非常に良い記事です',children);
-tree
+
+const values = [];
+for (let value of tree){
+  values.push(value);
+}
+values
