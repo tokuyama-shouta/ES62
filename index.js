@@ -565,3 +565,7 @@ for (let value of tree){
   values.push(value);
 }
 values
+
+const promise = new Promise((resolve, reject) => {
+  resolve();
+});
