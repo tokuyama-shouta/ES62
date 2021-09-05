@@ -567,7 +567,12 @@ for (let value of tree){
 values
 
 const promise = new Promise((resolve, reject) => {
-  resolve();
+  let request = new XHTMLRequest();
+  // Ajaxリクエストをする
+  request.onload = () => {
+    resolve();
+  };
+  
 });
 
 promise
