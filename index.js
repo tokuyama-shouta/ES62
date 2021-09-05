@@ -585,4 +585,4 @@ promise
 url = "https://jsonplaceholder.typicode.come/posts/";
 fetch(url)
   .then(responce => responce.json())
-  .then(data => console.log(data));
+  .catch(error => console.log('問題発生',error));
