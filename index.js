@@ -569,3 +569,8 @@ values
 const promise = new Promise((resolve, reject) => {
   resolve();
 });
+
+promise
+  .then(() => console.log('処理が実行されました！'))
+  .then(() => console.log('ここも実行されるよ'))
+  .catch(() => console.log('問題発生'));
