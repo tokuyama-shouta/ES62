@@ -579,3 +579,10 @@ promise
   .then(() => console.log('処理が実行されました！'))
   .then(() => console.log('ここも実行されるよ'))
   .catch(() => console.log('問題発生'));
+
+
+
+url = "https://jsonplaceholder.typicode.come/posts/";
+fetch(url)
+  .then(responce => responce.json())
+  .then(data => console.log(data));
